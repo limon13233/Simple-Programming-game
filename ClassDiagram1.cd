@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Menu">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAQAAAAAAAEAAAAABAAYAAQIEIAACAAIAAAI=</HashCode>
+      <FileName>Assets\Scripts\Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Controller">
+    <Position X="14.25" Y="1" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="Controller.FuntionsList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Controller.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAACABAAAAAAAABAAAAECAAAAEIQAIAQEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainLoop">
+    <Position X="19.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAACAAAAAAAAAAAQAAAAAAAgAAAAgQAIAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jump">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoveUp">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoveDown">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoveRight">
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoveLeft">
+    <Position X="7.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChangeColor_">
+    <Position X="11.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Function_">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CreationBlock" BaseTypeListCollapsed="true">
+    <Position X="19.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAJAEAAAAAAAACAAAAAAEAAABAA=</HashCode>
+      <FileName>Assets\Scripts\CreationBlock.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="robot">
+    <Position X="17.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAQIQCAAAgAAA=</HashCode>
+      <FileName>Assets\Scripts\robot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIDrop" BaseTypeListCollapsed="true">
+    <Position X="17.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAiAAAAAAAAAAgAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UIDrop.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UIDrag" BaseTypeListCollapsed="true">
+    <Position X="16" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAAAiAIARAABABAECAAAIAAACAAAAAAAQAAAkA=</HashCode>
+      <FileName>Assets\Scripts\UIDrag.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

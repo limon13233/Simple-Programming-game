@@ -1,0 +1,19 @@
+{
+"instructions_readme": "1) Open Chrome, 2) go to chrome://tracing, 3) click Load, 4) navigate to this file.",
+
+"traceEvents":[
+{ "pid": "Unity", "ph":"M", "name": "process_name", "args": {"name": "Unity"} },
+{ "pid": "Unity", "ph":"M", "name": "process_sort_index", "args": {"sort_index": -100} },
+{ "pid": "Unity", "tid": 1, "ph":"M", "name": "thread_name", "args": {"name": ""} },
+{ "pid": "Unity", "tid": 1,"ts": 1.68311552704923E+15,"dur": 5110196, "ph":"X", "name": "Build player"},
+{ "pid": "Unity", "tid": 1,"ts": 1.68311552708956E+15,"dur": 16880, "ph":"X", "name": "Preprocess Player"},
+{}
+
+],
+"meta_datetime": "05/03/2023 15:05:32",
+"meta_command_line": "D:\\unity\\2021.3.20f1\\Editor\\Unity.exe -projectpath \"D:\\course project 1\\SimpleProgramming\" -useHub -hubIPC -cloudEnvironment production -licensingIpc LicenseClient-\u0410\u043d\u0434\u0440\u0435\u0439 -hubSessionId 5b867f2e-1387-4a37-812e-6a049bab9c03 -accessToken zD9cbILIA1tDQwfBz-jtwGWBqYhsjji1EsBaoNDW9HM009f",
+"meta_command_line_args": "D:\\unity\\2021.3.20f1\\Editor\\Unity.exe -projectpath D:\\course project 1\\SimpleProgramming -useHub -hubIPC -cloudEnvironment production -licensingIpc LicenseClient-\u0410\u043d\u0434\u0440\u0435\u0439 -hubSessionId 5b867f2e-1387-4a37-812e-6a049bab9c03 -accessToken zD9cbILIA1tDQwfBz-jtwGWBqYhsjji1EsBaoNDW9HM009f",
+"meta_user_name": "\u0410\u043d\u0434\u0440\u0435\u0439",
+"meta_os_version": "Microsoft Windows NT 10.0.19044.0",
+"meta_cpu_count": "8"
+}
