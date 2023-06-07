@@ -381,7 +381,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.2, y: -1562.5}
+  m_AnchoredPosition: {x: -0.000011444, y: -948}
   m_SizeDelta: {x: 160, y: 46.5397}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &284466036
@@ -589,8 +589,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -356.6}
-  m_SizeDelta: {x: 1028.2, y: 713.2}
+  m_AnchoredPosition: {x: 0, y: -702.37}
+  m_SizeDelta: {x: 1028.2, y: 2117.9436}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &792223410
 GameObject:
@@ -900,7 +900,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.6656, y: -578.5579}
+  m_AnchoredPosition: {x: -0.000011683, y: 81}
   m_SizeDelta: {x: 942.2017, y: 1870.3159}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &893416907
@@ -1248,6 +1248,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teoriya: {fileID: 1817222221}
   Vstuplenie: {fileID: 2005763031}
+  inst: {fileID: 0}
+  steps: []
+  cr: {fileID: 0}
+  question: {fileID: 0}
+  answerq: []
+  can: {fileID: 0}
+  can2: {fileID: 0}
 --- !u!4 &1238915778
 Transform:
   m_ObjectHideFlags: 0
@@ -2076,8 +2083,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 799188077}
   m_HandleRect: {fileID: 799188076}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 1
+  m_Value: 0.9999988
+  m_Size: 0.33674175
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

@@ -13,7 +13,15 @@ public class Menu : MonoBehaviour
     public GameObject[] steps;
     public Controller cr;
     public GameObject question;
-    public Toggle answerq;
+    public Toggle[] answerq;
+    public GameObject can;
+    public GameObject can2;
+
+    GameManger manger;
+    public void Start()
+    {
+        manger = GameObject.Find("GameManger").GetComponent<GameManger>();
+    }
     public void OnPlay(int scene)
     {
         SceneManager.LoadScene(scene);
@@ -50,16 +58,28 @@ public class Menu : MonoBehaviour
     }
     public void answer()
     {
-        if (answerq.isOn)
-        {
-            question.SetActive(false);
-            cr.loop1.paused = false;
-        }
-        else
-        {
-            question.SetActive(false);
-            cr.Stop();
-        }
+       
+            if (answerq[manger.Score-1].isOn)
+            {
+                question.SetActive(false);
+                cr.loop1.paused = false;
+            }
+            else
+            {
+                question.SetActive(false);
+                cr.Stop();
+            }
+        
+    }
+    public void Showlevels()
+    {
+        can.SetActive(false);
+        can2.SetActive(true);
+    }
+    public void Back()
+    {
+        can.SetActive(true);
+        can2.SetActive(false);
     }
 
 }

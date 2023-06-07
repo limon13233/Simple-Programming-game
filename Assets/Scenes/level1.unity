@@ -3498,6 +3498,7 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
+  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3512,7 +3513,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &534669904
 Camera:
   m_ObjectHideFlags: 0
@@ -3571,6 +3572,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
+--- !u!82 &534669906
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4e83562c5c9802d49b35f49b20f1b388, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.07
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &581071673
 GameObject:
   m_ObjectHideFlags: 0
@@ -6522,7 +6619,7 @@ MonoBehaviour:
   m_text: "\u0414\u043B\u044F \u043D\u0430\u0447\u0430\u043B\u043E \u0442\u0435\u0431\u0435
     \u043D\u0443\u0436\u043D\u043E \u0432\u044B\u0442\u044F\u043D\u0443\u0442\u044C
     \u0431\u043B\u043E\u043A \u0438 \u043F\u0435\u0440\u0435\u043C\u0435\u0441\u0442\u0438\u0442\u044C
-    \u0435\u0433\u043E \u0432 \u0441\u0432\u043E\u0439 \u0430\u043B\u0433\u043E\u0440\u0438\u0442\u043C"
+    \u0435\u0433\u043E \u043D\u0430 \u044D\u043A\u0440\u0430\u043D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8307,7 +8404,10 @@ MonoBehaviour:
   - {fileID: 1937644337}
   cr: {fileID: 1937446015}
   question: {fileID: 61060160}
-  answerq: {fileID: 981315872}
+  answerq:
+  - {fileID: 981315872}
+  can: {fileID: 0}
+  can2: {fileID: 0}
 --- !u!4 &1266620133
 Transform:
   m_ObjectHideFlags: 0
@@ -11197,7 +11297,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0412\u043E\u0442 \u0442\u0430\u043A"
+  m_text: "\u041F\u043E\u0442\u043E\u043C \u0441\u043D\u043E\u0432\u0430 \u0432\u0437\u044F\u0442\u044C
+    \u0431\u043B\u043E\u043A \u0438 \u043F\u0435\u0440\u0435\u043C\u0435\u0441\u0442\u0438\u0442\u044C
+    \u0435\u0433\u043E \u0432 \u043F\u043E\u043B\u0435 \u0430\u043B\u0433\u043E\u0440\u0438\u0442\u043C\u0430\n\u0412\u043E\u0442
+    \u0442\u0430\u043A"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11879,6 +11982,23 @@ PrefabInstance:
       propertyPath: btnAnswer
       value: 
       objectReference: {fileID: 61060160}
+    - target: {fileID: 2257845194695531854, guid: bd6ee82c5e06b3f4f86113cbf8261ae1, type: 3}
+      propertyPath: question.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2257845194695531854, guid: bd6ee82c5e06b3f4f86113cbf8261ae1, type: 3}
+      propertyPath: answer.rows.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2257845194695531854, guid: bd6ee82c5e06b3f4f86113cbf8261ae1, type: 3}
+      propertyPath: question.Array.data[0]
+      value: "\u0427\u0442\u043E \u0442\u0430\u043A\u043E\u0435 \u0430\u043B\u0433\u043E\u0440\u0438\u0442\u043C
+        ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2257845194695531854, guid: bd6ee82c5e06b3f4f86113cbf8261ae1, type: 3}
+      propertyPath: answer.rows.Array.data[0].row.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3541754002163558908, guid: bd6ee82c5e06b3f4f86113cbf8261ae1, type: 3}
       propertyPath: m_Name
       value: Jammo_Player
@@ -12894,23 +13014,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 701933590528574644, guid: eee4871456d6b3a4f8111001cafd9d53, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 701933590528574644, guid: eee4871456d6b3a4f8111001cafd9d53, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 701933590528574644, guid: eee4871456d6b3a4f8111001cafd9d53, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 174.59998
       objectReference: {fileID: 0}
     - target: {fileID: 701933590528574644, guid: eee4871456d6b3a4f8111001cafd9d53, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 92.29999
       objectReference: {fileID: 0}
     - target: {fileID: 701933590528574644, guid: eee4871456d6b3a4f8111001cafd9d53, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 701933590699572716, guid: eee4871456d6b3a4f8111001cafd9d53, type: 3}
       propertyPath: m_Name
@@ -12934,7 +13054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 701933590699572717, guid: eee4871456d6b3a4f8111001cafd9d53, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 701933590699572717, guid: eee4871456d6b3a4f8111001cafd9d53, type: 3}
       propertyPath: m_AnchorMin.x
@@ -12942,11 +13062,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 701933590699572717, guid: eee4871456d6b3a4f8111001cafd9d53, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 701933590699572717, guid: eee4871456d6b3a4f8111001cafd9d53, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 184.59998
       objectReference: {fileID: 0}
     - target: {fileID: 701933590699572717, guid: eee4871456d6b3a4f8111001cafd9d53, type: 3}
       propertyPath: m_SizeDelta.y
@@ -12982,11 +13102,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 701933590699572717, guid: eee4871456d6b3a4f8111001cafd9d53, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 97.29999
       objectReference: {fileID: 0}
     - target: {fileID: 701933590699572717, guid: eee4871456d6b3a4f8111001cafd9d53, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -60
       objectReference: {fileID: 0}
     - target: {fileID: 701933590699572717, guid: eee4871456d6b3a4f8111001cafd9d53, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

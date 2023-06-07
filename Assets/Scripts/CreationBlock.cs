@@ -9,10 +9,12 @@ public class CreationBlock : MonoBehaviour,IBeginDragHandler,IEndDragHandler,IDr
     public GameObject Canvas;
     private GameObject clone;
     private Transform start;
+    
     public void OnBeginDrag(PointerEventData eventDatax)
     {
         start = transform;
         clone= Instantiate(block,gameObject.transform.position,gameObject.transform.rotation,Canvas.transform);
+
     }
 
     public void OnDrag(PointerEventData eventData)

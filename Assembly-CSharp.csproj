@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\GameManger.cs" />
     <Compile Include="Assets\Scripts\UIDrop.cs" />
     <Compile Include="Assets\Scripts\robot.cs" />
+    <Compile Include="Assets\Scripts\ArrayLayout.cs" />
     <Compile Include="Assets\Scripts\UIDrag.cs" />
     <Compile Include="Assets\Jammo-Character\Scripts\CharacterSkinController.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />

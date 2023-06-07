@@ -15,7 +15,7 @@ public class UIDrag : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerClic
     public GameObject vo1;
     private RectTransform rectTransform;
     private Vector2 initialSizeDelta;
-    void Awake()
+    public void Awake()
     {
         panel = GameObject.Find("Panel Main Loop");
         vo1 = GameObject.Find("Void");
@@ -55,7 +55,7 @@ public class UIDrag : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerClic
         Debug.Log("start drag " + gameObject.name);
     }
 
-    void Start()
+    public void Start()
     {
         canvas_ = GameObject.Find("Canvas");
         panelGhost = GameObject.Find("Panel ghost");

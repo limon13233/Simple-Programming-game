@@ -355,6 +355,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Jammo-Character/Scripts/CharacterSkinController.cs"
 "Assets/Jammo-Character/Scripts/MovementInput.cs"
+"Assets/Scripts/ArrayLayout.cs"
 "Assets/Scripts/Controller.cs"
 "Assets/Scripts/CreationBlock.cs"
 "Assets/Scripts/GameManger.cs"

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,7 +18,8 @@ public class Controller : MonoBehaviour
     public MainLoop loop1;
     public GameObject bolts;
     GameManger manger;
-    
+
+
     public void Paly()
     {
         
@@ -55,7 +57,7 @@ public class Controller : MonoBehaviour
     
     void Update()
     {
-       
+      
         if (isPlaying == 2) //play
         {
            
@@ -87,7 +89,7 @@ public class Controller : MonoBehaviour
         foreach (Transform child in parent)
         {
             char[] separator = { '_', '(' };
-            var functionName = child.name.Split(separator, System.StringSplitOptions.RemoveEmptyEntries); //looks like a little face ^^
+            var functionName = child.name.Split(separator, System.StringSplitOptions.RemoveEmptyEntries); 
 
             if (functionName[0] == "Function")
             {
@@ -112,9 +114,10 @@ public class Controller : MonoBehaviour
                     case "Jump":
                         sequence_.Add(new Jump("Jump"));
                         break;
-                    //case "If":
-                    //    sequence_.Add(new If("If"));
-                    //    break;
+                    case "If":
+
+                        sequence_.Add(new If("If"));
+                        break;
                 }
             }
         }
@@ -146,8 +149,10 @@ public class MainLoop
 
         WaitForSeconds wait = new WaitForSeconds(waitTime);
         this.end = false;
+        int ifcount = 0;
         foreach (Function_ fun in this.sequence_)
         {
+           
             while (paused)
             {
                 yield return null;
@@ -155,7 +160,48 @@ public class MainLoop
 
             if (!paused)
             {
-                fun.Func(this.mainTarget);
+                if(fun.ID!="If")
+                {
+                    fun.Func(this.mainTarget);
+                }
+                else
+                {
+                    
+                    GameObject[] obj = GameObject.FindGameObjectsWithTag("If_block");
+                    TMP_Dropdown tmpDropdown = obj[ifcount].GetComponentInChildren<TMP_Dropdown>();
+                    int selectedIndex = tmpDropdown.value;
+                    Function_ dey = new Function_("ID");
+                    foreach (Transform child in obj[ifcount].transform)
+                    {
+                        char[] separator = { '_', '(' };
+                        var functionName = child.name.Split(separator, System.StringSplitOptions.RemoveEmptyEntries);
+
+                        if (functionName[0] == "Function")
+                        {
+                            string function = functionName[1];
+                            switch (function)
+                            {
+                                case "MoveRight":
+                                    dey = new MoveRight("MoveRight");
+                                    break;
+                                case "MoveLeft":
+                                    dey = new MoveLeft("MoveLeft");
+                                    break;
+                                case "MoveUp":
+                                    dey = new MoveUp("MoveUp");
+                                    break;
+                                case "MoveDown":
+                                    dey = new MoveDown("MoveDown");
+                                    break;
+                                case "Jump":
+                                    dey = new Jump("Jump");
+                                    break;
+                            }
+                        }
+                    }
+                    fun.FuncIF(dey, this.mainTarget,selectedIndex.ToString());
+                    ifcount++;
+                }
                 yield return wait;
             }
         }
@@ -164,7 +210,67 @@ public class MainLoop
 
 
 }
+public class If: Function_
+{
 
+    public If(string ID) : base(ID)
+    {
+        this.ID = ID;
+    }
+
+    override public void FuncIF(Function_ f, GameObject mainTarget, string u)
+    {
+        RaycastHit hit;
+        Vector3 rayOrigin;
+        Vector3 rayDirection;
+        switch (u)
+        {
+            case "1":
+                rayOrigin = mainTarget.transform.position;
+                rayDirection = mainTarget.transform.forward;
+                if (Physics.Raycast(rayOrigin, rayDirection, out hit, 1f))
+                {
+
+                    Debug.Log("Luch pp");
+
+
+                    if (hit.collider.CompareTag("Wall"))
+                    {
+                        Debug.Log("Стена обнаружена перед персонажем!");
+                        f.Func(mainTarget);
+                    }
+                    else
+                    {
+                        Debug.Log("Стена ne обнаружена");
+                    }
+                }
+                else
+                {
+                    Debug.Log("luch ne popal");
+                }
+                break;
+            case "0":
+                Vector3 forwardDirection = mainTarget.transform.forward; // Направление персонажа
+                rayOrigin = mainTarget.transform.position + Vector3.up * 1f;
+                rayDirection = Quaternion.Euler(45f, 0f, 0f) * Vector3.forward;
+                rayDirection = Quaternion.LookRotation(forwardDirection) * rayDirection;
+                if (Physics.Raycast(rayOrigin, rayDirection, out hit, 2.2f))
+                {
+                    Debug.DrawRay(rayOrigin, rayDirection, Color.red, 2f);
+                    Debug.Log("Пропости нет");
+                }
+                else
+                {
+                    Debug.DrawRay(rayOrigin, rayDirection, Color.red, 2f);
+                    f.Func(mainTarget);
+                    Debug.Log("пропость обнаружена");
+                }
+                break;
+        }
+
+
+    }
+}
 
 public class Jump : Function_
 {
@@ -259,6 +365,10 @@ public class Function_
     }
 
     public virtual void Func(GameObject mainTarget)
+    {
+
+    }
+    public virtual void FuncIF(Function_ f,GameObject mainTarget, string u)
     {
 
     }

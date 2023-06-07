@@ -8,6 +8,8 @@ TagManager:
   - finish
   - trash
   - bolt
+  - Wall
+  - If_block
   layers:
   - Default
   - TransparentFX
